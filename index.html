@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+  }
+  .login-container {
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .login-form {
+    width: 100%;
+    max-width: 300px;
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .input-group button {
+    width: 100%;
+    padding: 8px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .input-group button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+<div class="login-container">
+  <h1 class="login-title">Login</h1>
+  <form class="login-form">
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="input-group">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+<script>
+  const loginForm = document.querySelector('.login-form');
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Replace this with your actual authentication logic
+    if (username === 'user' && password === 'password') {
+      alert('Login successful!');
+      // Redirect to another page or perform further actions
+    } else {
+      alert('Login failed. Incorrect username or password.');
+    }
+  });
+</script>
+</body>
+</html>
